@@ -8,7 +8,7 @@
 
 if (php_sapi_name() != "cli") {
 
-	print "This script can only be run from the command line!\n";
+	print_s "This script can only be run from the command line!\n";
 	exit(1);
 
 }
@@ -19,7 +19,7 @@ if (php_sapi_name() != "cli") {
 */
 function printSyntax($progname) {
 
-	print "Syntax: $progname [ --dice n | --eff ]\n\n"
+	print_s "Syntax: $progname [ --dice n | --eff ]\n\n"
 		. "\t--dice  Number of dice to generate a wordlist for.  Must be between 5 and 7 inclusive. Defaults to 5.\n"
 		. "\t--eff Generate wordlist against the EFF's list, found at https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases"
 		. "\n"
@@ -274,7 +274,7 @@ function main($argv) {
 	//
 	$js = getJsArray($words, $params);
 
-	print $js;
+	print_s $js;
 
 } // End of main()
 
