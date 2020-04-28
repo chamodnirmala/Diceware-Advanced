@@ -275,7 +275,7 @@ function main($argv) {
 	$js = getJsArray($words, $params);
 
 	print_s $js;
-
+//fix 1
 } // End of main()
 
 
